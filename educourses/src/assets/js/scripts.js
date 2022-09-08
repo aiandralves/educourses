@@ -1,3 +1,14 @@
+
+/** Show Preloader **/
+
+window.addEventListener("load", () => {
+  document.querySelector(".preloader").classList.add("fade-out");
+  setTimeout(() => {
+      document.querySelector(".preloader").style.display = "none";
+  }, 2000);
+});
+
+
 /** Show Menu Navbar **/
 
 const showMenu = (toggleId, navId) => {
