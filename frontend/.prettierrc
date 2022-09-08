@@ -1,0 +1,8 @@
+{
+    "singleQuote": false,
+    "tabWidth": 4,
+    "trailingComma": "all",
+    "editorconfig": true,
+    "endOfLine": "crlf",
+    "prettier/prettier": ["error"]
+}
