@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.1.4 | MIT License | https://tailwindcss.com
+! tailwindcss v3.1.8 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -349,13 +349,6 @@ textarea {
 */
 
 input::-moz-placeholder, textarea::-moz-placeholder {
-  opacity: 1;
-  /* 1 */
-  color: #9ca3af;
-  /* 2 */
-}
-
-input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   opacity: 1;
   /* 1 */
   color: #9ca3af;
@@ -940,6 +933,13 @@ body {
   }
 }
 
+@media (min-width: 1280px) {
+  .home-container {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+
 .home-info {
   padding-left: 4rem;
   padding-right: 4rem;
@@ -1462,13 +1462,6 @@ body {
 }
 
 .form-input:not(:-moz-placeholder-shown).form-input:not(:focus) + .form-label {
-  top: -0.75rem;
-  z-index: 10;
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-
-.form-input:not(:-ms-input-placeholder).form-input:not(:focus) + .form-label {
   top: -0.75rem;
   z-index: 10;
   font-size: 0.75rem;
