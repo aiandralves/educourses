@@ -1,0 +1,344 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply font-title text-text text-sm font-medium;
+}
+
+.spad {
+    @apply py-20 md:py-28;
+}
+
+/** BUTTON **/
+
+.button {
+    @apply py-3 md:py-4 px-4 md:px-6 rounded-md bg-primary text-white transition-4s hover:bg-accent text-sm md:text-base font-semibold inline-flex items-center gap-3;
+}
+
+.button:hover .btn-icon {
+    @apply transform translate-x-1;
+}
+
+.btn-icon {
+    @apply text-base;
+}
+
+/** TITLE **/
+
+.section-title {
+    @apply text-center mb-12;
+}
+
+.section-title h3 {
+    @apply text-primary uppercase font-bold tracking-wide mb-1 text-base lg:text-xl;
+}
+
+.section-title h2 {
+    @apply text-accent capitalize font-bold text-2xl lg:text-3xl;
+}
+
+/** HEADER **/
+
+.header {
+    @apply w-full fixed top-0 left-0 z-20 bg-body;
+}
+
+.nav {
+    @apply max-w-[1024px] h-12 flex justify-between items-center md:h-16;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        @apply fixed -top-full left-0 w-full pt-6 px-0 pb-4 text-center bg-body
+        transition-4s shadow-header rounded-b-2xl rounded-r-2xl z-20;
+    }
+}
+
+.nav-list {
+    @apply md:flex;
+}
+
+.nav-item {
+    @apply mb-6 md:ml-[5rem] md:mb-0;
+}
+
+.nav-link {
+    @apply font-semibold text-base hover:text-primary transition-4s;
+}
+
+.nav-logo,
+.footer-logo {
+    @apply flex items-center gap-x-2 text-accent text-base font-semibold hover:text-primary;
+}
+
+.nav-logo i,
+.footer-logo i {
+    @apply text-primary text-xl;
+}
+
+.nav-toggle {
+    @apply text-2xl cursor-pointer md:hidden;
+}
+
+.show-menu {
+    @apply top-12;
+}
+
+.active {
+    @apply text-primary;
+}
+
+.scroll-header {
+    @apply shadow-scroll;
+}
+
+/** SCROLLTOP **/
+
+.scrollTop {
+    @apply fixed right-4 -bottom-1/4 flex justify-center items-center p-2 bg-secondary/[.8] rounded hover:bg-secondary transition-4s z-10 invisible;
+}
+
+.scrollTop i {
+    @apply text-white text-2xl;
+}
+
+.show-scroll {
+    @apply visible bottom-6;
+}
+
+/** HOME **/
+
+.home {
+    @apply pb-16 grid grid-cols-1 md:grid-cols-2 gap-8 items-center;
+}
+
+.home-container {
+    @apply container pt-28 md:pt-36;
+}
+
+.home-info {
+    @apply px-16;
+}
+
+.home-info h3 {
+    @apply text-primary uppercase font-bold tracking-wide mb-1 text-base;
+}
+
+.home-info h1 {
+    @apply text-accent font-bold text-4xl lg:text-5xl mb-4;
+}
+
+.home-info p {
+    @apply text-base text-text mb-6 text-justify;
+}
+
+.home-image {
+    @apply w-full h-3 md:h-[550px] bg-none md:bg-home bg-cover bg-center bg-no-repeat;
+}
+
+/** ABOUT **/
+
+.about-container {
+    @apply container grid grid-cols-1 md:grid-cols-2 gap-8 items-center;
+}
+
+.about-info {
+    @apply text-center md:text-left;
+}
+
+.about-info .section-title h3,
+.about-info .section-title h2 {
+    @apply text-center md:text-left;
+}
+
+.about-info p {
+    @apply text-justify text-base font-medium mb-8;
+}
+
+.about-image {
+    @apply md:-order-1 w-full flex justify-center lg:justify-start;
+}
+
+.about-image img {
+    @apply max-w-[380px] lg:max-w-[480px] rounded-lg;
+}
+
+/** CATEGORIES **/
+
+.category-container {
+    @apply container pt-12 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3;
+}
+
+.category-card {
+    @apply bg-[#f5f5f5] p-5 flex items-center gap-5 rounded transition-4s;
+}
+
+.card-icon {
+    @apply bg-white h-14 w-14 grid place-items-center rounded transition-4s;
+}
+
+.card-icon i {
+    @apply text-primary text-2xl;
+}
+
+.card-title a {
+    @apply text-accent text-base font-bold hover:text-primary transition-4s;
+}
+
+.category-card span {
+    @apply text-base font-semibold mt-2;
+}
+
+/** COURSES **/
+
+.courses {
+    @apply bg-[#f5f5f5];
+}
+
+.course-container {
+    @apply pt-12 container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12;
+}
+
+.course-card {
+    @apply bg-white relative overflow-hidden rounded-md;
+}
+
+.card-banner {
+    @apply overflow-hidden bg-[#f5f5f5];
+}
+
+.card-banner img {
+    @apply w-full h-full object-cover transition-4s hover:transform hover:scale-110;
+}
+
+.card-content {
+    @apply py-6 px-5;
+}
+
+.card-list {
+    @apply flex justify-start items-center gap-4;
+}
+
+.card-list li {
+    @apply flex items-center gap-2 text-base font-semibold mb-4;
+}
+
+.card-price {
+    @apply text-xl font-bold text-primary;
+}
+
+/** CONTACT **/
+
+.contact-container {
+    @apply container grid grid-cols-1 w-full md:w-3/5;
+}
+
+.contact-info h2 {
+    @apply text-accent text-2xl md:text-3xl mb-4 font-bold;
+}
+
+.contact-info p {
+    @apply text-base md:text-xl font-semibold mb-8;
+}
+
+.contact-form {
+    @apply grid gap-y-8 mb-10;
+}
+
+.form-group {
+    @apply relative h-12 border-b border-b-gray-300;
+}
+
+.form-input {
+    @apply absolute top-0 left-0 w-full h-full py-4 pr-4 pl-0 bg-transparent border-none outline-none
+    text-text z-10;
+}
+
+.form-label {
+    @apply absolute top-3 w-full text-sm text-gray-400 transition-4s;
+}
+
+.form-area {
+    @apply h-28;
+}
+
+.form-area textarea {
+    @apply resize-none;
+}
+
+.form-input:focus + .form-label {
+    @apply -top-3 left-0 text-xs z-10;
+}
+
+.form-input:not(:placeholder-shown).form-input:not(:focus) + .form-label {
+    @apply -top-3 text-xs z-10;
+}
+
+.contact-image {
+    @apply w-full flex justify-center -order-1 md:order-1;
+}
+
+.contact-image img {
+    @apply hidden lg:max-w-[500px] lg:block rounded-lg;
+}
+
+/** FOOTER **/
+
+.footer-container {
+    @apply container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-footer gap-8;
+}
+
+.footer-title {
+    @apply text-accent text-xl mb-6 font-bold;
+}
+
+.footer-subscribe {
+    @apply bg-gray-100 p-3 flex justify-between rounded-md w-4/5;
+}
+
+.footer-input {
+    @apply w-[70%] py-0 px-2 bg-transparent text-text border-none outline-none;
+}
+
+.footer-btn {
+    @apply p-4;
+}
+
+.footer-info li {
+    @apply flex items-center gap-x-2 mb-4 text-sm hover:text-primary font-semibold cursor-pointer;
+}
+
+.footer-info li i {
+    @apply text-base text-primary;
+}
+
+.footer-social {
+    @apply inline-flex gap-4;
+}
+
+.footer-social a {
+    @apply text-xl transition-4s hover:text-primary;
+}
+
+.footer-copy {
+    @apply flex justify-center items-center pt-12;
+}
+
+.footer-copy p {
+    @apply border-t border-t-gray-300 py-6 w-[90%] text-center text-sm;
+}
+
+.footer-copy p a {
+    @apply text-primary font-semibold hover:text-secondary;
+}
+
+/** SCROLLBAR **/
+
+::-webkit-scrollbar {
+    @apply w-[.4rem] h-[.4rem] bg-[#828c87];
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-[#474d4a] rounded-lg;
+}
