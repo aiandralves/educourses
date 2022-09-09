@@ -1,4 +1,12 @@
-import { Body, Controller, Get, NotFoundException, Post } from "@nestjs/common";
+import {
+    Body,
+    Controller,
+    Get,
+    NotFoundException,
+    Param,
+    Post,
+    Put,
+} from "@nestjs/common";
 import { CategoriesService } from "./categories.service";
 import { CategoryDTO } from "./category.dto";
 
@@ -16,5 +24,12 @@ export class CategoriesController {
     @Get()
     async findAll() {
         return this.categoriesService.findAll();
+    }
+
+    @Put(":id")
+    async update(@Param("id") id: string, @Body() data: CategoryDTO) {
+        return this.categoriesService.update(+id, data).catch((e) => {
+            throw new NotFoundException(e.message);
+        });
     }
 }

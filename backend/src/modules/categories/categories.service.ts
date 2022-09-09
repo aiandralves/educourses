@@ -25,4 +25,21 @@ export class CategoriesService {
     async findAll(): Promise<CategoryDTO[]> {
         return await this.prisma.category.findMany();
     }
+
+    async update(id: number, data: CategoryDTO) {
+        const category = await this.prisma.category.findUnique({
+            where: {
+                id,
+            },
+        });
+
+        if (!category) {
+            throw new Error("Essa categoria não existe!");
+        }
+
+        return await this.prisma.category.update({
+            where: { id },
+            data,
+        });
+    }
 }
