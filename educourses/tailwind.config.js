@@ -30,12 +30,14 @@ module.exports = {
                 scroll: "0 2px 4px rgba(0, 0, 0, 0.1)",
             },
             backgroundImage: {
-                cta: "url('../img/cta-bg.png')",
                 home: "url('../img/01.jpg')",
             },
             gridTemplateColumns: {
                 footer: "1fr 0.5fr 0.5fr 0.5fr",
             },
+            maxWidth: {
+                nav: "1024px"
+            }
         },
     },
     plugins: [

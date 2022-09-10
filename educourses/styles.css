@@ -45,7 +45,7 @@ body {
 }
 
 .nav {
-    @apply max-w-[1024px] h-12 flex justify-between items-center md:h-16;
+    @apply max-w-nav h-12 flex justify-between items-center md:h-16;
 }
 
 @media screen and (max-width: 768px) {
@@ -60,7 +60,7 @@ body {
 }
 
 .nav-item {
-    @apply mb-6 md:ml-[5rem] md:mb-0;
+    @apply mb-6 md:ml-20 md:mb-0;
 }
 
 .nav-link {

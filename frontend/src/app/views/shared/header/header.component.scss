@@ -1,0 +1,45 @@
+.header {
+    @apply w-full fixed top-0 left-0 z-20 bg-body;
+}
+
+.nav {
+    @apply max-w-nav h-12 flex justify-between items-center md:h-16;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        @apply fixed -top-full left-0 w-full pt-6 px-0 pb-4 text-center bg-body transition-4s shadow-header rounded-b-2xl rounded-r-2xl z-20;
+    }
+}
+
+.nav-list {
+    @apply md:flex;
+}
+
+.nav-item {
+    @apply mb-6 md:ml-20 md:mb-0;
+}
+
+.nav-link {
+    @apply font-semibold text-base hover:text-primary transition-4s;
+}
+
+.nav-logo {
+    @apply flex items-center gap-x-2 text-accent text-base font-semibold hover:text-primary;
+
+    i {
+        @apply text-primary text-xl;
+    }
+}
+
+.nav-toggle {
+    @apply text-2xl cursor-pointer md:hidden;
+}
+
+.show {
+    @apply top-12;
+}
+
+.active {
+    @apply text-primary;
+}

@@ -1,0 +1,22 @@
+<header class=" header" id="header">
+    <nav class="nav container">
+        <a href="#" class="nav-logo">
+            <i class="bx bxs-graduation"></i>
+            EduCourses
+        </a>
+
+        <div class=" nav-menu" [class.show]="isOpenMenu">
+            <ul class="nav-list">
+                <li class="nav-item" *ngFor="let item of items">
+                    <a [routerLink]="item.routerLink" routerLinkActive="active" class="nav-link">
+                        {{ item.name }}
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="nav-toggle" (click)="menuToggle()">
+            <i class="bx {{ isOpenMenu ? 'bx-x' : 'bx-menu' }}"></i>
+        </div>
+    </nav>
+</header>

@@ -1,0 +1,27 @@
+.home {
+    @apply pb-16 grid grid-cols-1 md:grid-cols-2 gap-8 items-center;
+}
+
+.home-container {
+    @apply container pt-28 md:pt-36 xl:px-24;
+}
+
+.home-info {
+    @apply px-16;
+
+    h3 {
+        @apply text-primary uppercase font-bold tracking-wide mb-1 text-base;
+    }
+
+    h1 {
+        @apply text-accent font-bold text-4xl lg:text-5xl mb-4;
+    }
+
+    p {
+        @apply text-base text-text mb-6 text-justify;
+    }
+}
+
+.home-image {
+    @apply w-full h-3 md:h-home bg-none md:bg-home bg-cover bg-center bg-no-repeat;
+}
