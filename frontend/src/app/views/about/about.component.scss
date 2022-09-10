@@ -8,13 +8,6 @@
     p {
         @apply text-justify text-base font-medium mb-8;
     }
-
-    .section-title {
-        h2,
-        h3 {
-            @apply text-center md:text-left;
-        }
-    }
 }
 
 .about-image {
@@ -22,5 +15,14 @@
 
     img {
         @apply max-w-max380 lg:max-w-max480 rounded-lg;
+    }
+}
+
+:host ::ng-deep {
+    app-title .section-title {
+        h2,
+        h3 {
+            @apply text-center md:text-left;
+        }
     }
 }
