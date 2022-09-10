@@ -1,0 +1,22 @@
+<section class="categories spad" id="categories">
+    <div class="section-title">
+        <h3>Course Categories</h3>
+        <h2>Popular Topics To Learn</h2>
+    </div>
+
+    <div class="category-container">
+        <div class="category-card" *ngFor="let category of categories">
+            <div class="card-icon">
+                <i class="bx {{ category.icon }}"></i>
+            </div>
+            <div>
+                <h3 class="card-title">
+                    <a href="#">
+                        {{ category.title }}
+                    </a>
+                </h3>
+                <span>{{ category.courseId }} Courses</span>
+            </div>
+        </div>
+    </div>
+</section>

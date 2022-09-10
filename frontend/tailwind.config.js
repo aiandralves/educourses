@@ -24,6 +24,7 @@ module.exports = {
                 secondary: "#ffa31a",
                 text: "#6f6b80",
                 body: "#fbfefd",
+                container: "#f5f5f5"
             },
             boxShadow: {
                 header: "0 4px 4px rgba(0, 0, 0, 0.1)",

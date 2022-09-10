@@ -1,0 +1,23 @@
+.category-container {
+    @apply container pt-12 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3;
+}
+
+.category-card {
+    @apply bg-container p-5 flex items-center gap-5 rounded transition-4s;
+
+    span {
+        @apply text-base font-semibold mt-2;
+    }
+
+    .card-title a {
+        @apply text-accent text-base font-bold hover:text-primary transition-4s;
+    }
+}
+
+.card-icon {
+    @apply bg-white h-14 w-14 grid place-items-center rounded transition-4s;
+
+    i {
+        @apply text-primary text-2xl;
+    }
+}
