@@ -1,0 +1,43 @@
+.courses {
+    @apply bg-container;
+}
+
+.course-container {
+    @apply pt-12 container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12;
+}
+
+.course-card {
+    @apply bg-white relative overflow-hidden rounded-md;
+
+    .card-title a {
+        @apply text-accent text-base font-bold hover:text-primary transition-4s;
+    }
+}
+
+.card-banner {
+    @apply overflow-hidden bg-container;
+
+    img {
+        @apply w-full h-full object-cover transition-4s;
+
+        &:hover {
+            @apply transform scale-110;
+        }
+    }
+}
+
+.card-content {
+    @apply py-6 px-5;
+}
+
+.card-list {
+    @apply flex justify-start items-center gap-4;
+
+    li {
+        @apply flex items-center gap-2 text-base font-semibold mb-4;
+    }
+}
+
+.card-price {
+    @apply text-xl font-bold text-primary;
+}

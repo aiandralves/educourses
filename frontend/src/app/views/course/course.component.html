@@ -1,0 +1,34 @@
+<section class="courses spad" id="courses">
+    <app-title title="Popular Courses" subtitle="Our Popular Courses"></app-title>
+
+    <div class="course-container">
+        <div class="course-card" *ngFor="let course of courses">
+            <figure class="card-banner">
+                <img src="./assets/img/courses/{{ course.image }}" alt="">
+            </figure>
+
+            <div class="card-content">
+                <ul class="card-list">
+                    <li>
+                        <i class="bx {{ course.category }}"></i>
+                        <span>{{ course.category }}</span>
+                    </li>
+                    <li>
+                        <i class="bx bx-time-five"></i>
+                        <span>{{ course.time }}</span>
+                    </li>
+                </ul>
+                <h3 class="card-title mb-3">
+                    <a href="#">{{ course.title }}</a>
+                </h3>
+                <div class="card-price">
+                    <h4>${{ course.price }}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center">
+        <app-button name="Explore More"></app-button>
+    </div>
+</section>
