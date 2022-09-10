@@ -9,3 +9,14 @@ body {
 .spad {
     @apply py-20 md:py-28;
 }
+
+::-webkit-scrollbar {
+    width: 0.4rem;
+    height: 0.4rem;
+    background: #828c87;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #474d4a;
+    border-radius: 0.5rem;
+}
