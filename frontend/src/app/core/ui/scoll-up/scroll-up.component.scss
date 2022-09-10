@@ -1,0 +1,7 @@
+.scrollup {
+    @apply fixed right-4 bottom-8 bg-secondary p-2 opacity-80 flex justify-center items-center z-10 transition duration-500 hover:opacity-100;
+
+    i {
+        @apply text-white;
+    }
+}
