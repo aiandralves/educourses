@@ -1,0 +1,12 @@
+.button {
+    @apply py-3 md:py-4 px-4 md:px-6 rounded-md bg-primary text-white transition-4s hover:bg-accent text-sm md:text-base font-semibold inline-flex items-center gap-3
+    cursor-pointer;
+
+    &:hover .btn-icon {
+        @apply transform translate-x-1;
+    }
+}
+
+.btn-icon {
+    @apply text-base;
+}
