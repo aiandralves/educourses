@@ -1,0 +1,19 @@
+.preloader {
+    @apply fixed top-0 left-0 bg-accent z-50 w-screen h-screen flex justify-center items-center;
+}
+
+.loader {
+    @apply h-14 w-14 border-8 rounded-full border-primary/[.2] border-l-primary;
+}
+
+@layer components {
+    .loader {
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+}

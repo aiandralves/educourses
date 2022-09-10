@@ -2,6 +2,7 @@ import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
 import { UIModule } from "./core/ui/ui.module";
+import { LoaderService } from "./services/loader.service";
 import { AboutComponent } from "./views/about/about.component";
 import { CategoryComponent } from "./views/category/category.component";
 import { TextareaComponent } from "./views/contact/components/textarea/textarea.component";
@@ -29,5 +30,6 @@ const declarations = [
     declarations: [...declarations],
     imports: [CommonModule, ...modules],
     exports: [...declarations, ...modules],
+    providers: [LoaderService],
 })
 export class SharedModule {}
