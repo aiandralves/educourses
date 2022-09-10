@@ -1,0 +1,7 @@
+.footer-social {
+    @apply inline-flex gap-4;
+
+    a {
+        @apply text-xl transition-4s hover:text-primary;
+    }
+}

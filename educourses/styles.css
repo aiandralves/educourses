@@ -261,14 +261,6 @@ body {
     @apply -top-3 text-xs z-10;
 }
 
-.contact-image {
-    @apply w-full flex justify-center -order-1 md:order-1;
-}
-
-.contact-image img {
-    @apply hidden lg:max-w-[500px] lg:block rounded-lg;
-}
-
 /** FOOTER **/
 
 .footer-container {

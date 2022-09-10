@@ -1,0 +1,16 @@
+.footer-copy {
+    @apply flex justify-center items-center pt-12;
+
+    p {
+        @apply border-t py-6 text-center text-sm;
+
+        a {
+            @apply text-primary font-semibold hover:text-secondary;
+        }
+    }
+}
+
+.footer-copy p {
+    border-color-top: #d1d5db;
+    width: 90%;
+}

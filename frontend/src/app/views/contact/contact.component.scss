@@ -1,0 +1,17 @@
+.contact-container {
+    @apply container grid grid-cols-1 w-full md:w-3/5;
+}
+
+.contact-info {
+    h2 {
+        @apply text-accent text-2xl md:text-3xl mb-4 font-bold;
+    }
+
+    p {
+        @apply text-base md:text-xl font-semibold mb-8;
+    }
+}
+
+.contact-form {
+    @apply grid gap-y-8 mb-10;
+}

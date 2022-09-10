@@ -1,0 +1,17 @@
+.footer-subscribe {
+    @apply bg-gray-100 p-3 flex justify-between rounded-md w-4/5;
+}
+
+.footer-input {
+    @apply py-0 px-2 bg-transparent text-text border-none outline-none;
+}
+
+.footer-input {
+    width: 70%;
+}
+
+:host ::ng-deep {
+    .footer-btn {
+        @apply p-4 #{!important};
+    }
+}

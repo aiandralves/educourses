@@ -1,0 +1,7 @@
+.logo {
+    @apply flex items-center gap-x-2 text-accent text-base font-semibold hover:text-primary;
+
+    i {
+        @apply text-primary text-xl;
+    }
+}
