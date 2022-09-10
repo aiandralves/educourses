@@ -3,7 +3,7 @@
 }
 
 :host ::ng-deep {
-    app-logo {
+    app-logo .logo {
         @apply mb-6 #{!important};
     }
 }

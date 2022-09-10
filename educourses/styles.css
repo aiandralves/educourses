@@ -38,6 +38,16 @@ body {
     @apply text-accent capitalize font-bold text-2xl lg:text-3xl;
 }
 
+/** LOGO **/
+
+.logo {
+    @apply flex items-center gap-x-2 text-accent text-base font-semibold hover:text-primary;
+}
+
+.logo i {
+    @apply text-primary text-xl;
+}
+
 /** HEADER **/
 
 .header {
@@ -65,16 +75,6 @@ body {
 
 .nav-link {
     @apply font-semibold text-base hover:text-primary transition-4s;
-}
-
-.nav-logo,
-.footer-logo {
-    @apply flex items-center gap-x-2 text-accent text-base font-semibold hover:text-primary;
-}
-
-.nav-logo i,
-.footer-logo i {
-    @apply text-primary text-xl;
 }
 
 .nav-toggle {
