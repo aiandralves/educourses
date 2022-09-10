@@ -36,10 +36,15 @@ module.exports = {
                 footer: "1fr 0.5fr 0.5fr 0.5fr",
             },
             maxWidth: {
-                nav: "1024px"
+                nav: "1024px",
+                "max380": "380px",
+                "max480": "480px"
             },
             height: {
                 home: "550px"
+            },
+            order: {
+                negative: "-1"
             }
         },
     },

@@ -1,0 +1,26 @@
+.about-container {
+    @apply container grid grid-cols-1 md:grid-cols-2 gap-8 items-center;
+}
+
+.about-info {
+    @apply text-center md:text-left;
+
+    p {
+        @apply text-justify text-base font-medium mb-8;
+    }
+
+    .section-title {
+        h2,
+        h3 {
+            @apply text-center md:text-left;
+        }
+    }
+}
+
+.about-image {
+    @apply md:order-negative w-full flex justify-center lg:justify-start;
+
+    img {
+        @apply max-w-max380 lg:max-w-max480 rounded-lg;
+    }
+}

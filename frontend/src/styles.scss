@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    @apply font-title text-text text-sm font-medium;
+}
+
+.spad {
+    @apply py-20 md:py-28;
+}
+
+/** Title **/
+
+.section-title {
+    @apply text-center mb-12;
+
+    h3 {
+        @apply text-primary uppercase font-bold tracking-wide mb-1 text-base lg:text-xl;
+    }
+
+    h2 {
+        @apply text-accent capitalize font-bold text-2xl lg:text-3xl;
+    }
+}
