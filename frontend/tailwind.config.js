@@ -53,7 +53,7 @@ module.exports = {
         plugin(function ({ addComponents }) {
             addComponents({
                 ".transition-4s": {
-                    transition: ".4s",
+                    transition: ".3s",
                 },
             });
         }),

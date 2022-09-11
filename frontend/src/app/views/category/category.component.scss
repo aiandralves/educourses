@@ -14,6 +14,11 @@
     }
 }
 
+.category-card:hover {
+    border-bottom-width: 3px;
+    border-bottom-color: #525de0;
+}
+
 .card-icon {
     @apply bg-white h-14 w-14 grid place-items-center rounded transition-4s;
 
