@@ -1,4 +1,12 @@
-import { Body, Controller, Get, Post } from "@nestjs/common";
+import {
+    Body,
+    Controller,
+    Get,
+    NotFoundException,
+    Param,
+    Post,
+    Put,
+} from "@nestjs/common";
 import { CourseDTO } from "./course.dto";
 import { CoursesService } from "./courses.service";
 
@@ -14,5 +22,12 @@ export class CoursesController {
     @Get()
     async findAll() {
         return this.coursesService.findAll();
+    }
+
+    @Put(":id")
+    async update(@Param("id") id: number, @Body() data: CourseDTO) {
+        return this.coursesService.update(+id, data).catch((e) => {
+            throw new NotFoundException(e.message);
+        });
     }
 }

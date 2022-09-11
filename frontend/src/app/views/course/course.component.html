@@ -4,14 +4,14 @@
     <div class="course-container">
         <div class="course-card" *ngFor="let course of courses">
             <figure class="card-banner">
-                <img src="./assets/img/courses/{{ course.image }}" alt="">
+                <img src="./assets/img/courses/{{ course.imageUrl }}" alt="">
             </figure>
 
             <div class="card-content">
                 <ul class="card-list">
                     <li>
-                        <i class="bx {{ course.category }}"></i>
-                        <span>{{ course.category }}</span>
+                        <i class="bx {{ course.category.icon }}"></i>
+                        <span>{{ course.category.name }}</span>
                     </li>
                     <li>
                         <i class="bx bx-time-five"></i>
@@ -22,7 +22,7 @@
                     <a href="#">{{ course.title }}</a>
                 </h3>
                 <div class="card-price">
-                    <h4>${{ course.price }}</h4>
+                    <h4>{{ course.price | currency: 'BRL' }}</h4>
                 </div>
             </div>
         </div>

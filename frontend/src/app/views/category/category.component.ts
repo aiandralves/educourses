@@ -1,10 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-
-export type ICategory = {
-    icon: string;
-    title: string;
-    courseId: number;
-};
+import { CategoryController } from "app/controllers/category.controller";
+import { CategoryDTO } from "app/dtos/category.dto";
 
 @Component({
     selector: "app-category",
@@ -12,26 +8,17 @@ export type ICategory = {
     styleUrls: ["./category.component.scss"],
 })
 export class CategoryComponent implements OnInit {
-    categories: ICategory[] = [
-        {
-            icon: "bx-code",
-            title: "Web Development",
-            courseId: 5,
-        },
-        {
-            icon: "bxs-palette",
-            title: "Personal Development",
-            courseId: 8,
-        },
-        {
-            icon: "bxs-data",
-            title: "Database",
-            courseId: 3,
-        },
-    ];
+    categories: CategoryDTO[];
 
-    constructor() {}
+    constructor(private _categoryController: CategoryController) {}
 
-    ngOnInit(): void {}
+    ngOnInit() {
+        this.findCategories();
+    }
+
+    async findCategories(): Promise<CategoryDTO[] | void> {
+        return await this._categoryController.findAll().then((data) => {
+            this.categories = data;
+        });
+    }
 }
-

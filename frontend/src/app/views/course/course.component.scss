@@ -31,10 +31,10 @@
 }
 
 .card-list {
-    @apply flex justify-start items-center gap-4;
+    @apply flex justify-start items-center gap-4 text-xs;
 
     li {
-        @apply flex items-center gap-2 text-base font-semibold mb-4;
+        @apply flex items-center gap-2 text-sm font-semibold mb-4;
     }
 }
 

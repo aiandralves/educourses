@@ -50,7 +50,7 @@ export class LoaderComponent implements OnInit {
                     function () {
                         this._loaderService.hide();
                     }.bind(this),
-                    2000,
+                    3000,
                 );
             });
     }

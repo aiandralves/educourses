@@ -1,12 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-
-export type ICourse = {
-    image: string;
-    title: string;
-    category: string;
-    time: string;
-    price: number;
-};
+import { CourseController } from "app/controllers/course.controller";
+import { CourseDTO } from "app/dtos/course.dto";
 
 @Component({
     selector: "app-course",
@@ -14,18 +8,17 @@ export type ICourse = {
     styleUrls: ["./course.component.scss"],
 })
 export class CourseComponent implements OnInit {
-    courses: ICourse[] = [
-        {
-            image: "course-01.png",
-            title: "Education Makes A Person A Responsible Citizen",
-            category: "Front-End",
-            time: "18h 15m 44s",
-            price: 55.55,
-        },
-    ];
+    courses: CourseDTO[];
 
-    constructor() {}
+    constructor(private _courseController: CourseController) {}
 
-    ngOnInit(): void {}
+    ngOnInit() {
+        this.findCourses();
+    }
+
+    async findCourses(): Promise<CourseDTO | void> {
+        return await this._courseController.findAll().then((data) => {
+            this.courses = data;
+        });
+    }
 }
-

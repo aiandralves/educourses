@@ -22,6 +22,7 @@ model Course {
     description String
     price       Decimal
     imageUrl    String
+    time        String?
 
     category    Category? @relation(fields: [categoryId], references: [id])
     categoryId  Int?

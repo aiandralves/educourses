@@ -30,4 +30,19 @@ export class CoursesService {
 
         return courses;
     }
+
+    async update(id: number, data: CourseDTO) {
+        const course = await this.prisma.course.findFirst({
+            where: { id },
+        });
+
+        if (!course) {
+            throw new Error("Curso não encontrado!");
+        }
+
+        return await this.prisma.course.update({
+            where: { id },
+            data,
+        });
+    }
 }

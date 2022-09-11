@@ -3,7 +3,12 @@
 }
 
 .loader {
-    @apply h-14 w-14 border-8 rounded-full border-primary/[.2] border-l-primary;
+    @apply h-14 w-14 border-8 rounded-full;
+}
+
+.loader {
+    border-color: rgb(82, 93, 224, 0.2);
+    border-left-color: #525de0;
 }
 
 @layer components {
