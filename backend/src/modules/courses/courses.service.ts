@@ -31,6 +31,20 @@ export class CoursesService {
         return courses;
     }
 
+    async findOne(id: number) {
+        const course = await this.prisma.course.findFirst({
+            where: { id },
+        });
+
+        if (!course) {
+            throw new Error("Curso não encontrado!");
+        }
+
+        return await this.prisma.course.findFirst({
+            where: { id },
+        });
+    }
+
     async update(id: number, data: CourseDTO) {
         const course = await this.prisma.course.findFirst({
             where: { id },
@@ -43,6 +57,20 @@ export class CoursesService {
         return await this.prisma.course.update({
             where: { id },
             data,
+        });
+    }
+
+    async delete(id: number) {
+        const course = await this.prisma.course.findFirst({
+            where: { id },
+        });
+
+        if (!course) {
+            throw new Error("Curso não encontrado!");
+        }
+
+        return await this.prisma.course.delete({
+            where: { id },
         });
     }
 }

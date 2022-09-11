@@ -1,7 +1,10 @@
 import {
     Body,
     Controller,
+    Delete,
     Get,
+    HttpCode,
+    HttpStatus,
     NotFoundException,
     Param,
     Post,
@@ -24,9 +27,24 @@ export class CoursesController {
         return this.coursesService.findAll();
     }
 
+    @Get(":id")
+    async findOne(@Param("id") id: number) {
+        return this.coursesService.findOne(+id).catch((e) => {
+            throw new NotFoundException(e.message);
+        });
+    }
+
     @Put(":id")
     async update(@Param("id") id: number, @Body() data: CourseDTO) {
         return this.coursesService.update(+id, data).catch((e) => {
+            throw new NotFoundException(e.message);
+        });
+    }
+
+    @Delete(":id")
+    @HttpCode(HttpStatus.NO_CONTENT)
+    async delete(@Param("id") id: number) {
+        return this.coursesService.delete(+id).catch((e) => {
             throw new NotFoundException(e.message);
         });
     }

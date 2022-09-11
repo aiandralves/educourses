@@ -26,6 +26,20 @@ export class CategoriesService {
         return await this.prisma.category.findMany();
     }
 
+    async findOne(id: number) {
+        const category = await this.prisma.category.findFirst({
+            where: { id },
+        });
+
+        if (!category) {
+            throw new Error("Categoria não encontrada!");
+        }
+
+        return await this.prisma.category.findFirst({
+            where: { id },
+        });
+    }
+
     async update(id: number, data: CategoryDTO) {
         const category = await this.prisma.category.findUnique({
             where: {
@@ -40,6 +54,20 @@ export class CategoriesService {
         return await this.prisma.category.update({
             where: { id },
             data,
+        });
+    }
+
+    async delete(id: number) {
+        const category = await this.prisma.category.findFirst({
+            where: { id },
+        });
+
+        if (!category) {
+            throw new Error("Categoria não encontrada!");
+        }
+
+        return await this.prisma.category.delete({
+            where: { id },
         });
     }
 }
